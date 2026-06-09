@@ -325,7 +325,7 @@ export default function ProjectPage({ project }) {
             {/* Left: body text + blockquote */}
 
             <div style={{ display: 'flex', flexDirection: 'column', width: '70%', gap: '2rem' }}>
-              <SubHeading style={{ fontSize: '3rem' }}>Where it <em style={{ fontStyle: 'italic', color: 'var(--color-accent)' }}>started</em></SubHeading>
+              <SubHeading>Where it <em style={{ fontStyle: 'italic', color: 'var(--color-accent)' }}>started</em></SubHeading>
 
               <p style={{ ...body, fontSize: '1.4rem', lineHeight: 1.8 }}>{project.overviewText}</p>
               {project.overviewText2 && (
@@ -523,7 +523,7 @@ export default function ProjectPage({ project }) {
             {/* Visual direction */}
             {(project.visualDirectionText || project.designIntro || project.moodboardImage || project.uiKitImage) && (
               <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-                <SubHeading style={{ fontSize: '3rem' }}>Visual <em style={{ fontStyle: 'italic', color: 'var(--color-accent)' }}> direction</em></SubHeading>
+                <SubHeading>Visual <em style={{ fontStyle: 'italic', color: 'var(--color-accent)' }}> direction</em></SubHeading>
                 {(project.visualDirectionText || project.designIntro) && (
                   <p style={{ ...body, fontSize: '1.4rem', width: '70%' }}>{project.visualDirectionText || project.designIntro}</p>
                 )}
