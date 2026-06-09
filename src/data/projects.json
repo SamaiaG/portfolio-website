@@ -1,0 +1,370 @@
+[
+  {
+    "id": "tierheim-helenenhof",
+    "title": "Tierheim Helenenhof",
+    "year": 2026,
+    "type": "Website Redesign",
+    "slug": "/collection/tierheim-helenenhof",
+    "liveUrl": "https://tierheim-helenenhof.webflow.io/",
+    "prototypeUrlWeb": null,
+    "prototypeUrlMobile": null,
+    "cardColor": "rgb(212, 181, 181)",
+    "cardImage": "/assets/TierheimHelenenhof/cardImageth.webp",
+    "heroImage": "/assets/TierheimHelenenhof/cardImageth.webp",
+    "shortDescription": "A redesigned and restructured website that improves how users discover and adopt pets by making information clearer, navigation more intuitive, and the adoption process easier to understand.",
+    "tags": ["UX/UI", "UX Research", "Restructured Sitemap", "Volunteer Project"],
+    "roles": ["UX/UI Designer"],
+    "duration": "6 months",
+    "tools": ["Figma", "Webflow"],
+    "goal": "Help visitors quickly understand how they can help, discover pets' stories, and feel encouraged to get involved — without unnecessary effort.",
+    "overviewText": "I started this redesign while volunteering in the cat area at the Helenenhof animal shelter. Each time I tried to find information on their website, I struggled with its outdated layout, chaotic structure, and lack of a mobile version. I decided to redesign the entire website as a volunteer project, taking full ownership of the process — from user research and information architecture to wireframing, UI design, testing, and full implementation in Webflow.",
+    "problemText": "The website no longer reflected the warmth of the shelter, or supported people who wanted to adopt, donate, or help.",
+    "responsibilities": [
+      "UX/UI Design",
+      "Information Architecture",
+      "Webflow Implementation",
+      "User Research & Testing"
+    ],
+    "researchIntro": "Before starting the redesign, I conducted an online survey to understand how users perceived the old website. The goal was to uncover what users expected from a modern animal shelter website and identify the biggest pain points.",
+    "researchInsights": [
+      {
+        "label": "Why users visit:",
+        "text": "People come to adopt pets or find general information. Pet profiles are informative and help create a bond between visitors and the animals."
+      },
+      {
+        "label": "Navigation challenges:",
+        "text": "Overall navigation is not fully intuitive. Users particularly struggle with finding information about volunteering or becoming a member."
+      },
+      {
+        "label": "Trust & Credibility:",
+        "text": "Missing images, inconsistent layout, and incomplete information reduce users' trust in the website, even though it is somewhat credible."
+      },
+      {
+        "label": "Homepage & Engagement:",
+        "text": "The homepage feels boring and doesn't immediately engage users or reflect the warmth and character of the shelter."
+      }
+    ],
+    "personasIntro": "Two personas emerged from the survey: Emma, the adopter, and Lukas, the helper/donor.",
+    "persona1": {
+      "name": "Emma Schmidt",
+      "location": "Cologne, Germany",
+      "photo": "/assets/TierheimHelenenhof/persona1th.png",
+      "quote": "I want to find a pet that will stick to my soul, without getting lost and confused in the process.",
+      "goals": [
+        "Find a pet to adopt that fits her home and lifestyle",
+        "Learn about the pets' personality, needs, and health",
+        "Access the adoption process without confusion"
+      ],
+      "frustrations": [
+        "Outdated, non-responsive website",
+        "Homepage and navigation not engaging or intuitive",
+        "Adoption info is hard to find"
+      ]
+    },
+    "persona2": {
+      "name": "Lukas Weber",
+      "location": "Hürth, Germany",
+      "photo": "/assets/TierheimHelenenhof/persona2th.png",
+      "quote": "I want to help the shelter, but I shouldn't have to dig through an outdated site to figure out how.",
+      "goals": [
+        "Learn how to volunteer, donate, or become a member",
+        "Access relevant shelter support information",
+        "Feel connected to the animals and the shelter community"
+      ],
+      "frustrations": [
+        "Information is scattered and sometimes missing",
+        "Interface feels cold and uninviting"
+      ]
+    },
+    "auditIntro": null,
+    "auditImages": null,
+    "sitemapImage": "/assets/TierheimHelenenhof/sitemapth.png",
+    "sitemapDescription": "The new sitemap introduces a clear and concise hierarchy structured around primary navigation, reflecting how users naturally access information.",
+    "ideateIntro": "Before moving into digital design, I worked on paper sketches to give my ideas structure without being distracted by visual details. These wireframes helped me explore key user flows for both desktop and mobile.",
+    "sketchImages": [
+      { "image": "/assets/TierheimHelenenhof/sketch1.webp", "caption": "Home page" },
+      { "image": "/assets/TierheimHelenenhof/sketch2.webp", "caption": "Pets to adoption" }
+    ],
+    "designIntro": "Based on the client's wishes and user research, I developed a concept focused on clarity, warmth, and emotional connection. A friendly and cozy interface with soft shapes and nature-inspired colors felt right to represent the shelter.",
+    "moodboardImage": "/assets/TierheimHelenenhof/moodboardt.webp",
+    "uiKitImage": "/assets/TierheimHelenenhof/designsystemt.webp",
+    "lofiDescription": "Low-fidelity wireframes helped translate early ideas into a clearer structure, focusing on layout, hierarchy, and user flows before moving into high-fidelity design.",
+    "lofiImages": [
+      "/assets/TierheimHelenenhof/lo-fi-web.png",
+      "/assets/TierheimHelenenhof/lo-fi-mob.png"
+    ],
+    "hifiDescription": "The first iteration used a warm orange theme — approved by the client before testing began. After further discussion, the palette was refined to green tones from the original brand. Both versions are shown here because the orange theme captured the shelter's warmth so well.",
+    "hifiImages": [
+      "/assets/TierheimHelenenhof/tierheimV1.png",
+      "/assets/TierheimHelenenhof/tierheimV2.png"
+    ],
+    "testingIntro": "After completing the first design iteration, I conducted an online usability and perception survey to validate the concept, navigation, and overall user experience before implementation.",
+    "metrics": [
+      { "value": "100%", "label": "Positive or very positive first impression" },
+      { "value": "↑ High", "label": "Task completion rate across all tested scenarios" },
+      { "value": "3", "label": "Key navigation improvements identified for next iteration" }
+    ],
+    "testingOverall": "Participants described the website as warm, friendly, and trustworthy — qualities essential for an animal shelter.",
+    "refinementsIntro": "Based on testing results and stakeholder feedback, I made several refinements to improve clarity, navigation, and visual harmony — while preserving the shelter's existing logo for recognisability.",
+    "refinements": [
+      { "title": "Color palette", "text": "Adjusted to green tones and refined supporting colors for visual harmony with the shelter's existing identity." },
+      { "title": "Navigation", "text": "Simplified and condensed for better scannability and fewer clicks to key content." },
+      { "title": "Search over language switch", "text": "Replaced the language toggle with a search bar to improve content discoverability." },
+      { "title": "Logo preserved", "text": "Kept the shelter's existing logo to maintain recognisability and continuity." },
+      { "title": "Content reorganisation", "text": "Selected sections regrouped for improved clarity and logical flow." }
+    ],
+    "resultsDescription": "A fully responsive, user-centered website that improves clarity, accessibility, and emotional engagement — supporting users in making informed and emotional decisions while reflecting the shelter's values.",
+    "resultImages": [
+      { "image": "/assets/TierheimHelenenhof/th_result1.webp", "caption": "Home page — clarity, emotional entry, and primary actions" },
+      { "image": "/assets/TierheimHelenenhof/th_result2.png", "caption": "Pets to adopt — improved scannability and filtering" },
+      { "image": "/assets/TierheimHelenenhof/th_result3.webp", "caption": "Pet detail & adoption form — clear information hierarchy" }
+    ],
+    "mobileDescription": "The original website had no mobile version. Ensuring accessibility across all devices was one of the core goals of the redesign.",
+    "mobileImages": [
+      "/assets/TierheimHelenenhof/mob1.webp",
+      "/assets/TierheimHelenenhof/mob2.webp",
+      "/assets/TierheimHelenenhof/mob3.webp",
+      "/assets/TierheimHelenenhof/mob4.png",
+      "/assets/TierheimHelenenhof/mob5.png"
+    ],
+    "resultVideos": [
+      null
+    ],
+    "reflections": [
+      {
+        "title": "Being aware of biases",
+        "text": "Working as designer, architect, and developer — while also being a website visitor and shelter volunteer — made it essential to continuously separate personal experience from user needs. Design decisions had to stay grounded in research, not assumptions."
+      },
+      {
+        "title": "Flexibility & iteration",
+        "text": "User testing validated core structural decisions, while stakeholder feedback shaped the final visual direction. Implementing in Webflow revealed practical considerations not always visible in static designs — reinforcing how UX extends beyond design tools."
+      }
+    ],
+    "nextProjectId": "side-by-side",
+    "previousProjectId": null,
+    "featured": true,
+    "status": "live"
+  },
+  {
+    "id": "side-by-side",
+    "title": "Side By Side",
+    "year": 2026,
+    "type": "Concept Mobile App",
+    "slug": "/collection/side-by-side",
+    "liveUrl": null,
+    "prototypeUrlWeb": null,
+    "prototypeUrlMobile": "https://www.figma.com/proto/fUsqdqBuaf3qJNMTw4EUwL/SideBySide?node-id=133-12248&t=owiqMhyKclufGdNV-1",
+    "cardColor": "rgb(181, 196, 212)",
+    "cardImage": "/assets/SideBySide/sidebysidecover.webp",
+    "heroImage": null,
+    "shortDescription": "A mobile application designed to support expats and immigrants adapting to new countries by integrating emotional wellness tools, community features, and practical integration resources.",
+    "tags": ["UX/UI Design", "UX Research", "Mobile App", "Concept Project"],
+    "roles": ["UI/UX Designer"],
+    "duration": ["3 months"],
+    "tools": ["Figma"],
+    "goal": "Create a safe digital space where people navigating emigration can access emotional support, community, and practical tools.",
+    "overviewText": "SideBySide is a mobile app concept designed to support expats and immigrants adapting to new countries or cities. It combines emotional well-being tools, community features, and practical resources to help users manage loneliness, cultural differences, and integration challenges. My own experience with relocation shaped this project from the start — and every design decision was validated through user research.",
+    "problemText": "Thoughtful digital experiences can help people feel supported, even when navigating the hardest life changes.",
+    "responsibilities": [
+      "UI/UX Design",
+      "UX Research",
+      "Usability Testing"
+    ],
+    "researchIntro": "I surveyed 18 participants who had experienced moving to a new country or city, collecting qualitative and quantitative data about emotional well-being, social integration, and preferences for mental health and community support.",
+    "researchInsights": [
+      {
+        "label": "Community & belonging",
+        "text": "People connect primarily with similar backgrounds; finding genuine local community is difficult and time-consuming."
+      },
+      {
+        "label": "Mental health access",
+        "text": "Finding tailored support for expat-specific stressors is challenging."
+      },
+      {
+        "label": "Local connections",
+        "text": "Making connections with locals and accessing local events presents major obstacles."
+      },
+      {
+        "label": "Cultural guidance",
+        "text": "Users need practical help with language and cultural integration alongside emotional support."
+      }
+    ],
+    "personasIntro": "Research led to one primary persona representing the core target audience — an expat navigating isolation and the emotional challenges of settling in a new country.",
+    "persona1": {
+      "name": "Sofia",
+      "location": "Berlin, Germany",
+      "photo": "/assets/SideBySide/personasbs.png",
+      "quote": "I just want to feel like I belong somewhere. I'm learning, but it's hard to adjust on my own.",
+      "goals": [
+        "Find a supportive community that understands her struggles.",
+        "Reduce loneliness and anxiety during the transition.",
+        "Discover a sense of belonging in her new environment."
+      ],
+      "frustrations": [
+        "Isolation and situational stress from relocating.",
+        "Lack of mental health support tailored to expats.",
+        "Difficulty finding low-pressure ways to connect with others."
+      ]
+    },
+    "persona2": null,
+    "auditIntro": "I evaluated MindDoc, Headspace, Calm, and InterNations to identify gaps in existing solutions. Each app does one thing well — but none integrates mental health tools, community building, and offline event discovery together.",
+    "auditImages": "/assets/SideBySide/audit.webp",
+    "sitemapImage": "/assets/SideBySide/sitemap.png",
+    "sitemapDescription": "The information architecture is structured around five core sections — Relief, Connect, Explore, Offline Events, and Profile — each addressing a different aspect of the expat experience.",
+    "ideateIntro": "The visual direction was designed to feel calming and emotionally safe — reinforcing trust and approachability at every step. Special attention was given to readability, spacing, and emotional tone.",
+    "sketchImages": [{ "image": "/assets/SideBySide/sketch.png", "caption": "Home page" }],
+    "sketchDescription": null,
+    "visualDirectionText": "The visual direction was designed to feel calming and emotionally safe — reinforcing trust and approachability at every step.",
+    "moodboardImage": null,
+    "uiKitImage": "/assets/SideBySide/design-system.webp",
+    "lofiDescription": "Low-fidelity wireframes resolved navigation challenges, improved accessibility, and established visual hierarchy, prioritizing structure over style.",
+    "lofiImages": ["/assets/SideBySide/lo-fi.webp"],
+    "hifiDescription": "High-fidelity wireframes define four main flows — Explore/Home (mood check-ins), Connect (community), Offline Events (local meetups), and Relief (guided exercises) — designed around calm, intuitive interactions.",
+    "hifiImages": ["/assets/SideBySide/hi-fi1.png", "/assets/SideBySide/hi-fi2.png"],
+    "testingIntro": "I conducted exploratory usability testing with 5 participants from the target audience to validate the clarity and usability of the proposed solution.",
+    "testingQuote": "Users found the app intuitive and emotionally supportive — main features and flows were understood without guidance.",
+    "metrics": [
+      { "value": "18", "label": "Survey participants for qualitative and quantitative research" },
+      { "value": "5", "label": "Usability testing participants validated the solution" },
+      { "value": "↑", "label": "Intuitive, easy to navigate, emotionally supportive" }
+    ],
+    "testingOverall": "Users found the app intuitive and emotionally supportive — main features and flows were understood without guidance.", 
+    "refinements": [
+      {
+        "title": "Navigation clarity",
+        "text": "Clarified connections between key screens to reduce confusion during onboarding and main flows."
+      },
+      {
+        "title": "Interactive elements",
+        "text": "Improved visibility of tappable elements with stronger visual cues and touch target sizing."
+      },
+      {
+        "title": "Hierarchy & microcopy",
+        "text": "Refined spacing, labels, and content structure throughout for clearer communication and visual balance."
+      }
+    ],
+    "resultsText": "A clear, friendly app concept combining emotional support, community, and practical tools. The design helps users feel guided, supported, and confident exploring the app.",
+    "resultImages": null,
+    "mobileDescription": null,
+    "mobileImages": null,
+    "resultVideos": ["/assets/SideBySide/video1.mp4","/assets/SideBySide/video2.mp4","/assets/SideBySide/video3.mp4","/assets/SideBySide/video4.mp4"],
+    "reflections": [
+      {
+        "title": "Empathy without bias",
+        "text": "My personal background gave me valuable empathy for this subject. But I remained conscious of potential bias and relied on research and diverse perspectives throughout."
+      },
+      {
+        "title": "Designing for emotion",
+        "text": "This project strengthened my ability to design emotionally sensitive products, balancing empathy, usability, and scalability. Thoughtful digital experiences can help people feel supported even through the hardest life changes."
+      }
+    ],
+    "nextProjectId": "quickxchange",
+    "previousProjectId": "tierheim-helenenhof",
+    "featured": true,
+    "status": "live"
+  },
+  {
+    "id": "quickxchange",
+    "title": "QuickXchange",
+    "year": 2025,
+    "type": "Concept Mobile App & Website",
+    "slug": "/collection/quickxchange",
+    "liveUrl": null,
+    "prototypeUrlWeb": "https://www.figma.com/proto/KNzcyIJ2DhsyAXAwa5rVnH/QuickXChange?node-id=1051-9553&t=mznK5R8FoVAx4JIB-1",
+    "prototypeUrlMobile": "https://www.figma.com/proto/KNzcyIJ2DhsyAXAwa5rVnH/QuickXChange?node-id=126-1622&t=mznK5R8FoVAx4JIB-1",
+    "cardColor": "rgb(181, 212, 192)",
+    "cardImage": "/assets/QuickXChange/qxccover.webp",
+    "heroImage": null,
+    "shortDescription": "A currency exchange platform designed for travelers, offering real-time rates, secure transactions, and convenient payout options in cash or digital form.",
+    "tags": ["UX/UI Design", "UX Research", "Concept Project"],
+    "roles": ["UI/UX Designer"],
+    "duration": ["4 months"],
+    "tools": ["Figma"],
+    "goal": "Design a simple and trustworthy currency exchange experience — without confusion, hidden fees, or outdated rates. A clean, intuitive app that shows up-to-date rates, clearly communicates fees, and allows quick conversions online and offline.",
+    "overviewText": "QuickXChange is a concept for a fast and transparent currency exchange platform. The project explores how complex financial information can be simplified into a clear, user-friendly experience that supports confident decision-making — on the go and offline.The design covers both a mobile app for quick on-the-go exchanges and a website for account management and detailed financial overviews.",
+    "problemText": "Small details — wording, layout, and feedback — can significantly impact user confidence in a financial context.",
+    "responsibilities": [
+      "UI/UX Design",
+      "UX Research"
+    ],
+    "researchIntro": "Through surveys and desk research I explored how users compare exchange rates, what builds trust in a financial app, and where existing solutions fall short.",
+    "researchInsights": [
+      {
+        "label": "Rate accuracy",
+        "text": "Users feel unsure and frustrated when exchange rates don't seem accurate or up to date — accuracy is the primary trust signal."
+      },
+      {
+        "label": "Interface complexity",
+        "text": "When the interface feels complicated, users feel slowed down and worried about making mistakes — especially with money."
+      },
+      {
+        "label": "Fee transparency",
+        "text": "Hidden fees quickly break trust. People want to clearly understand what they're paying and why before committing to an exchange."
+      },
+      {
+        "label": "Offline access",
+        "text": "Travelers appreciate having access to basic exchange information even without internet — offline mode is a meaningful differentiator."
+      }
+    ],
+    "personasIntro": "Angelo is a budget traveler who needs a straightforward way to check and convert currencies on his phone — making informed decisions while sticking to his travel budget",
+    "persona1": {
+      "name": "Angelo Smith",
+      "location": "Madrid, Spain",
+      "photo": "/assets/QuickXChange/persona.png",
+      "quote": "I just want to know exactly what I'm getting and avoid any surprises - keeping it simple helps me focus on enjoying the journey.",
+      "goals": [
+        "Check rates quickly in unfamiliar places, especially when planning daily expenses.",
+        "Minimize fees while exchanging small amounts frequently.",
+        "Find nearby exchange services or reliable app-based conversion options."
+      ],
+      "frustrations": [
+        "Lack of an easy way to track his preferred currencies over time.",
+        "Unclear fees and inconsistent rates when exchanging currencies while traveling."
+      ],
+      "behavior": [
+        "Frequently checks exchange rates and compares currencies before making payments or transfers.",
+        "Uses the app while traveling across different countries.",
+        "Prefers fast, clear actions and relies on familiar patterns to avoid mistakes when handling finances."
+      ]
+    },
+    "persona2": null,
+    "auditIntro": "I evaluated Revolut, PayPal, and Xe to assess their strengths, weaknesses, and gaps. These apps excel at real-time rate tracking and user trust, but fall short on offline functionality and fee transparency — areas QuickXChange directly addresses.",
+    "auditImages": "/assets/QuickXChange/audit.webp",
+    "sitemapImage": "/assets/QuickXChange/sitemap.png",
+    "sitemapDescription": "The app is structured around five key sections: Exchange, Tools, Nearby ATMs, History, and Profile — ensuring intuitive navigation for performing financial tasks efficiently.",
+    "ideateIntro": "During ideation, I translated user pain points into possible solutions — exploring ways to simplify the conversion flow and build trust through clarity and feedback. Early concepts kept the main action, currency conversion, front and centre.",
+    "sketchImages": [{ "image": "/assets/QuickXChange/sketch1.png", "caption": "Mobile app" }, { "image": "/assets/QuickXChange/sketch2.png", "caption": "Website" }],
+    "sketchDescription": "During ideation, I translated user pain points into possible solutions — exploring ways to simplify the conversion flow and build trust through clarity and feedback. Early concepts kept the main action, currency conversion, front and centre.",
+    "visualDirectionText": "The design phase focused on clarity and usability. A lightweight visual style, clear hierarchy, and familiar UI patterns were used to help users feel confident and in control. Special attention was given to readability, spacing, and visual cues that guide users through the exchange process",
+    "moodboardImage": null,
+    "uiKitImage": "/assets/QuickXChange/design-system.png",
+    "lofiDescription": "Low-fidelity wireframes were used to quickly explore layout options and key user flows — selecting currencies, entering amounts, and viewing results — without visual details getting in the way.",
+    "lofiImages": ["/assets/QuickXChange/lo-fi1.webp", "/assets/QuickXChange/lo-fi2.webp"],
+    "hifiDescription": "High-fidelity wireframes brought the concept to life with refined visuals, colours, typography, and interactions — demonstrating how users move through the exchange flow and access key information with minimal effort.",
+    "hifiImages": ["/assets/QuickXChange/hi-fi1.png", "/assets/QuickXChange/hi-fi2.png"],
+    "testingIntro": null,
+    "testingQuote": null,
+    "metrics": [],
+    "testingOverall": null,
+    "refinements": [],
+    "resultsText": "The final design delivers a clear and user-friendly currency exchange experience — allowing users to quickly convert currencies and understand rates and fees at a glance. The mobile app supports on-the-go use, while the website focuses on account management and a more detailed financial overview.",
+    "resultImages": [{ "image": "/assets/QuickXChange/result-web.webp", "caption": null }],
+    "mobileDescription": null,
+    "mobileImages": ["/assets/QuickXChange/mob1.png", "/assets/QuickXChange/mob2.png", "/assets/QuickXChange/mob3.png", "/assets/QuickXChange/mob4.png", "/assets/QuickXChange/mob5.png", "/assets/QuickXChange/mob6.png"],
+    "resultVideos": [null],
+    "reflections": [
+      {
+        "title": "Designing for trust",
+        "text": "Finance-related design requires extra attention to how information is presented. Small decisions around wording, layout, and feedback carry more weight than in other contexts — trust is earned through every detail."
+      },
+      {
+        "title": "Simplicity as a feature",
+        "text": "The biggest challenge was not adding features, but deciding what to leave out. Reducing cognitive load in a financial app required restraint — every extra element was weighed against whether it helped or hindered the user's confidence."
+      }
+    ],
+    "nextProjectId": null,
+    "previousProjectId": "side-by-side",
+    "featured": true,
+    "status": "live"
+  }
+]

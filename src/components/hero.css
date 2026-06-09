@@ -1,0 +1,121 @@
+/* ── Heading word reveal ── */
+@keyframes wordSlideUp {
+  from { transform: translateY(115%); }
+  to   { transform: translateY(0); }
+}
+
+.word-reveal {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  line-height: inherit;
+}
+
+.word-inner {
+  display: inline-block;
+  animation: wordSlideUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* ── Desktop: 2-col grid — illustration left, text + buttons right ── */
+.hero-container {
+  display: grid;
+  grid-template-columns: 50% 1fr;
+  grid-template-rows: auto auto;
+  gap: 0 40px;
+  align-content: center;
+}
+
+.hero-illustration {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  overflow: visible;
+}
+
+.hero-text {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  padding-left: 20px;
+  gap: 24px;
+}
+
+.hero-buttons {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding-left: 20px;
+  padding-bottom: 60px;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+/* ── Mobile: column stack — text → illustration → buttons ── */
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    height: auto !important;
+    padding-top: 120px;
+    gap: 32px;
+    padding-bottom: 48px;
+  }
+
+  .hero-illustration {
+    order: 2;
+    width: 100%;
+    height: 55vw;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-text {
+    order: 1;
+    padding: 0;
+    gap: 16px;
+    text-align: left;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(2.4rem, 11vw, 4rem) !important;
+  }
+
+  .hero-text h1 br {
+    display: none;
+  }
+
+  .hero-text p {
+    font-size: 1.2rem !important;
+    line-height: 1.7 !important;
+  }
+
+  /* badge moves below description */
+  .hero-badge {
+    font-size: 0.65rem !important;
+    order: 3;
+  }
+
+  .hero-text h1 { order: 1; }
+  .hero-text p  { order: 2; }
+
+  .hero-buttons {
+    order: 3;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 0;
+  }
+
+  .hero-scroll {
+    display: none;
+  }
+}

@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+  .contact-page h2 { font-size: 2rem !important; }
+  .contact-page p  { font-size: 1rem !important; }
+  .contact-page label { font-size: 12px !important; }
+  .contact-page input,
+  .contact-page textarea {
+    font-size: 1rem !important;
+    padding: 8px 12px !important;
+  }
+}

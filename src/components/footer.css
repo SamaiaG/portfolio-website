@@ -1,0 +1,7 @@
+@media (min-width: 769px) {
+  .footer-link-label          { font-size: 20px !important; }
+  .footer-eyebrow             { font-size: 13px !important; }
+  .footer-copy                { font-size: 14px !important; }
+  .footer-tagline             { font-size: 15px !important; }
+  .footer-button .sg-btn      { font-size: 1.3rem !important; padding: 12px 32px !important; }
+}

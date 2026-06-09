@@ -1,0 +1,29 @@
+@media (max-width: 768px) {
+  /* single column, same gap as work page */
+  .selected-work-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* first card loses its full-width span */
+  .selected-work-grid > *:first-child {
+    grid-column: auto !important;
+  }
+
+  /* card image area */
+  .selected-work-grid a > div:first-child {
+    flex: 0 0 16rem !important;
+  }
+
+  /* card title */
+  .selected-work-grid h3 {
+    font-size: 1.6rem !important;
+  }
+
+  /* type label */
+  .selected-work-grid p:first-of-type {
+    font-size: 0.7rem !important;
+  }
+
+  
+}

@@ -1,0 +1,50 @@
+@media (max-width: 768px) {
+  .explorations-header {
+    gap: 1rem !important;
+    margin-bottom: 24px !important;
+  }
+
+  .explorations-header > p {
+    font-size: 1rem !important;
+    max-width: 100% !important;
+  }
+
+  /* description paragraph — scoped to explorations content only */
+  .explorations-pickperfect p,
+  .explorations-pickperfect-row p {
+    font-size: 1rem !important;
+    max-width: 100% !important;
+  }
+
+  /* illustrations: 2-column grid instead of masonry columns */
+  .explorations-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+    columns: unset !important;
+  }
+
+  /* reset masonry margin and fix card height */
+  .explorations-grid > *,
+  .explorations-grid > * > div:first-child {
+    margin-bottom: 0 !important;
+    height: 160px !important;
+  }
+
+  /* Pick Perfect: stack text and image vertically */
+  .explorations-pickperfect-row {
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+
+  .explorations-pickperfect-row > div,
+  .explorations-pickperfect-row > a {
+    width: 100% !important;
+  }
+
+  .explorations-pickperfect-row img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+  }
+}

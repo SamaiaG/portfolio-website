@@ -1,0 +1,29 @@
+@theme {
+  /* Fonts */
+  --font-display: 'Playfair Display', serif;
+  --font-heading: 'DM Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Core */
+  --color-bg:     #F5F5F5;  /* page background */
+  --color-surface: rgb(255, 255, 255);  /* cards, navbar */
+
+  /* Text */
+  --color-text:        rgb(46, 42, 53);          /* primary — headings, body */
+  --color-text-muted:  rgb(69, 74, 106);         /* secondary — nav links, captions */
+  --color-text-subtle: rgba(46, 42, 53, 0.5);   /* dimmed — placeholders, meta */
+
+  /* Accent */
+  --color-accent:       rgb(192, 143, 143);  /* dusty rose */
+  --color-accent-dark:  rgb(94, 64, 64);     /* dark rose — text on rose bg */
+  --color-accent-light: rgb(212, 181, 181);  /* light rose — tag bg */
+
+  /* Tag palette */
+  --color-tag-green: rgb(181, 212, 192);  /* mint */
+  --color-tag-blue:  rgb(181, 196, 212);  /* steel blue */
+  --color-tag-rose:  rgb(212, 181, 181);  /* rose */
+
+  /* Borders & shadows */
+  --color-border:  rgba(46, 42, 53, 0.1);
+  --color-shadow:  rgba(51, 51, 51, 0.1);
+}

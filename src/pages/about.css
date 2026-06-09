@@ -1,0 +1,145 @@
+.about-hero-row {
+  display: flex;
+  gap: 64px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.about-hero-left  { flex: 1 1 500px; display: flex; flex-direction: column; gap: 24px; }
+.about-hero-photo { flex: 0 1 500px; border-radius: 20px; overflow: hidden; border: 1px solid var(--color-border); }
+
+.about-journey-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.about-approach-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.about-interest-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  /* ── Hero ── */
+  .about-hero-section {
+    padding-top: 100px !important;
+    gap: 40px !important;
+    height: auto !important;
+    min-height: 100vh;
+  }
+
+  .about-hero-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .about-hero-left {
+    flex: none;
+    width: 100%;
+    gap: 1rem !important;
+  }
+
+  .about-hero-left h1 {
+    font-size: 2.4rem !important;
+  }
+
+  /* location badge */
+  .about-hero-left > span {
+    font-size: 0.6rem !important;
+  }
+
+  .about-hero-photo {
+    flex: none;
+    width: 70%;
+    height: auto;
+    max-width: none;
+  }
+
+  .about-hero-photo img {
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  .about-hero-desc {
+    font-size: 1.3rem !important;
+    line-height: 1.7 !important;
+  }
+
+  /* ── My Journey ── */
+  .about-journey-section {
+    padding-bottom: 0 !important;
+  }
+
+  .about-journey-grid { grid-template-columns: 1fr; }
+
+  /* entire card = 320px */
+  .about-journey-grid > div {
+    height: 320px;
+    overflow: hidden;
+  }
+
+  /* iframe fills remaining space */
+  .about-journey-grid > div > div:first-child {
+    flex: 1 !important;
+    height: auto !important;
+  }
+
+  /* card text */
+  .about-journey-grid > div > div:last-child p {
+    font-size: 1rem !important;
+  }
+
+  /* ── My Approach ── */
+  .about-approach-section {
+    padding-bottom: 0 !important;
+  }
+
+  .about-approach-grid { grid-template-columns: 1fr; }
+
+  .about-approach-grid > div {
+    height: auto;
+    min-height: unset;
+  }
+
+  .about-approach-grid > div h3 {
+    font-size: 1.5rem !important;
+  }
+
+  .about-approach-grid > div p {
+    font-size: 1rem !important;
+  }
+
+  /* ── Beyond the Screen ── */
+  .about-beyond-section {
+    margin-bottom: 60px;
+
+  }
+
+  .about-beyond-desc {
+    font-size: 1.3rem !important;
+    max-width: 100% !important;
+  }
+
+  .about-interest-tags {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-interest-tags button {
+    width: 100%;
+    justify-content: center;
+    font-size: 1rem !important;
+    padding: 8px 14px !important;
+  }
+}
