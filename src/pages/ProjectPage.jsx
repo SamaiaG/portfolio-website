@@ -214,7 +214,7 @@ export default function ProjectPage({ project }) {
       <Navbar />
 
       {/* ── Hero ── */}
-      <div className="container" style={{ paddingTop: '200px', paddingBottom: '0' }}>
+      <div className="container" style={{ paddingTop: '120px', paddingBottom: '0' }}>
 
         {/* Back link */}
         <Link
