@@ -98,7 +98,7 @@ export default function Explorations() {
     <div style={{ minHeight: '100vh', backgroundColor: 'var(--color-bg)' }}>
       <Navbar />
 
-      <main className="container" style={{ padding: '200px 0 80px' }}>
+      <main className="container" style={{ padding: '120px 0 80px' }}>
 
         {/* Header */}
         <FadeIn>

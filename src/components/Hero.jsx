@@ -47,7 +47,7 @@ export default function Hero() {
             <span className="word-reveal">
               <span className="word-inner" style={{ color: 'var(--color-text)', animationDelay: '0.22s' }}>I'm</span>
             </span>
-            <br />
+            <br />{' '}
             <span className="word-reveal">
               <span className="word-inner" style={{ fontStyle: 'italic', color: 'var(--color-accent)', animationDelay: '0.36s' }}>Samaia.</span>
             </span>

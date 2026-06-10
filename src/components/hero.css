@@ -115,6 +115,11 @@
     padding: 0;
   }
 
+  .hero-buttons .sg-btn {
+    font-size: 1.2rem !important;
+    padding: 12px 32px !important;
+  }
+
   .hero-scroll {
     display: none;
   }
