@@ -1,9 +1,8 @@
 import './project-page.css'
 import { Link } from 'react-router-dom'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { usePageTitle } from '../hooks/usePageTitle'
 import ReadingProgress from '../components/ReadingProgress'
-import SectionDivider from '../components/SectionDivider'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import projects from '../data/projects.json'
@@ -37,7 +36,6 @@ const eyebrow = {
 function Section({ id, label, children, style }) {
   return (
     <>
-      <SectionDivider />
       <FadeIn>
         <section id={id} style={{ padding: '2rem 0', ...style }}>
           <div className="container">
@@ -198,9 +196,31 @@ function VideoCard({ src }) {
   )
 }
 
+/* ─── Scroll hint: true when any card in the row has content to scroll ── */
+function useCardsOverflow(dep) {
+  const ref = useRef(null)
+  const [overflow, setOverflow] = useState(false)
+  useEffect(() => {
+    const row = ref.current
+    if (!row) return
+    const check = () => setOverflow(
+      [...row.querySelectorAll('.hide-scrollbar')].some(card => card.scrollHeight > card.clientHeight + 1)
+    )
+    // images resize when they load and when the viewport changes
+    const observer = new ResizeObserver(check)
+    row.querySelectorAll('img').forEach(img => observer.observe(img))
+    check()
+    return () => observer.disconnect()
+  }, [dep])
+  return [ref, overflow]
+}
+
 /* ─── Main component ─────────────────────────────────────────────────── */
 export default function ProjectPage({ project }) {
   usePageTitle(`${project.title} · Samaia Gahramanov`)
+  const [sketchRowRef, sketchOverflow] = useCardsOverflow(project.id)
+  const [lofiRowRef, lofiOverflow] = useCardsOverflow(project.id)
+  const [resultRowRef, resultOverflow] = useCardsOverflow(project.id)
   const nextProject = project.nextProjectId
     ? projects.find(p => p.id === project.nextProjectId)
     : null
@@ -276,7 +296,7 @@ export default function ProjectPage({ project }) {
         {/* Meta row */}
         <div
           className="project-meta-row"
-          style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', flexWrap: 'wrap', gap: 0, padding: 0, marginBottom: '48px', borderTop: '1px solid var(--color-border)', borderBottom: '1px solid var(--color-border)', overflow: 'hidden' }}
+          style={{ display: 'flex', flexDirection: 'row', alignItems: 'stretch', flexWrap: 'wrap', gap: 0, padding: 0, marginBottom: '48px', borderTop: '1px solid var(--color-border)', borderBottom: '1px solid var(--color-border)', overflow: 'hidden' }}
         >
           {[
             { label: 'ROLE', value: project.roles?.join(', ') },
@@ -297,7 +317,7 @@ export default function ProjectPage({ project }) {
             <div style={{ padding: '20px 24px', display: 'flex', alignItems: 'center', gap: '12px', borderLeft: '1px solid var(--color-border)' }}>
               {project.liveUrl && (
                 <Button variant="primary" arrow href={project.liveUrl} target="_blank" rel="noopener">
-                  Live website
+                  {project.liveLabel ?? 'Live website'}
                 </Button>
               )}
               {project.prototypeUrlMobile && (
@@ -478,8 +498,10 @@ export default function ProjectPage({ project }) {
               <p style={{ ...body, fontSize: '1.4rem', width: '70%' }}>{project.ideateIntro}</p>
             )}
             <div>
-              <p className="scroll-hint" style={{ ...eyebrow, marginBottom: '12px', textAlign: 'right' }}>scroll within the cards to view more</p>
-              <div className="sketch-images-row" style={{ display: 'flex', width: '100%', gap: '16px' }}>
+              {sketchOverflow && (
+                <p className="scroll-hint" style={{ ...eyebrow, marginBottom: '12px', textAlign: 'right' }}>scroll within the cards to view more</p>
+              )}
+              <div ref={sketchRowRef} className="sketch-images-row" style={{ display: 'flex', width: '100%', gap: '16px' }}>
                 {project.sketchImages.map((item, i) => (
                   <div key={i} style={{ flex: 1, minWidth: 0 }}>
                     <ImageLightbox src={item.image} alt={item.caption ?? ''}>
@@ -559,8 +581,10 @@ export default function ProjectPage({ project }) {
                 {project.lofiDescription && (
                   <p style={{ ...body, fontSize: '1.4rem', width: '70%' }}>{project.lofiDescription}</p>
                 )}
-                <p className="scroll-hint" style={{ ...eyebrow, marginBottom: '4px', textAlign: 'right' }}>scroll within the cards to view more</p>
-                <div className="lofi-images-row" style={{ display: 'flex', width: '100%', gap: '16px' }}>
+                {lofiOverflow && (
+                  <p className="scroll-hint" style={{ ...eyebrow, marginBottom: '4px', textAlign: 'right' }}>scroll within the cards to view more</p>
+                )}
+                <div ref={lofiRowRef} className="lofi-images-row" style={{ display: 'flex', width: '100%', gap: '16px' }}>
                   {project.lofiImages.map((src, i) => (
                     <div key={i} style={{ flex: 1, minWidth: 0 }}>
                       <ImageLightbox src={src} alt="">
@@ -672,7 +696,7 @@ export default function ProjectPage({ project }) {
       )}
 
       {/* ── Results ── */}
-      {(project.resultImages?.length > 0 || project.resultsDescription || project.resultsText || project.resultVideos?.filter(Boolean).length > 0 || project.prototypeUrlWeb || project.prototypeUrlMobile) && (
+      {(project.resultImages?.length > 0 || project.resultsDescription || project.resultsText || project.resultVideos?.filter(Boolean).length > 0 || project.prototypeUrlWeb || project.prototypeUrlMobile || project.newScreensDescription) && (
         <Section id="results" label="results">
           <div style={{ display: 'flex', flexDirection: 'column', gap: '4rem' }}>
 
@@ -686,7 +710,7 @@ export default function ProjectPage({ project }) {
                 <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', alignItems: 'center' }}>
                   {project.liveUrl && (
                     <Button variant="primary" arrow href={project.liveUrl} target="_blank" rel="noopener">
-                      Live website
+                      {project.liveLabel ?? 'Live website'}
                     </Button>
                   )} 
                   {project.prototypeUrlMobile && (
@@ -704,14 +728,16 @@ export default function ProjectPage({ project }) {
               </div>
               {project.resultImages?.length > 0 && (
                 <>
-                  <p className="scroll-hint" style={{ ...eyebrow, marginBottom: '4px', textAlign: 'right' }}>scroll within the cards to view more</p>
-                  <div style={{ display: 'flex', flexDirection: 'column', width: '100%', gap: '16px' }}>
+                  {resultOverflow && (
+                    <p className="scroll-hint" style={{ ...eyebrow, marginBottom: '4px', textAlign: 'right' }}>scroll within the cards to view more</p>
+                  )}
+                  <div ref={resultRowRef} style={{ display: 'flex', flexDirection: 'column', width: '100%', gap: '16px' }}>
                     {project.resultImages.map((r, i) => (
                       <div key={i} style={{ flex: 1, minWidth: 0 }}>
                         <ImageLightbox src={r.image} alt={r.caption ?? ''}>
                           <div
                             style={{
-                              height: '600px',
+                              maxHeight: '600px',
                               overflowY: 'auto',
                               borderRadius: '16px',
                               border: '1px solid var(--color-border)',
@@ -743,14 +769,13 @@ export default function ProjectPage({ project }) {
             </div>
 
             {/* Mobile */}
-            {project.mobileImages?.length > 0 && (
+            {project.mobileDescription && (
               <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                 <SubHeading>Mobile <em style={{ fontStyle: 'italic', color: 'var(--color-accent)' }}>version</em></SubHeading>
-                {project.mobileDescription && (
-                  <p style={{ ...body, fontSize: '1.4rem', width: '70%' }}>{project.mobileDescription}</p>
-                )}
+                <p style={{ ...body, fontSize: '1.4rem', width: '70%' }}>{project.mobileDescription}</p>
+                {project.mobileImages?.filter(Boolean).length > 0 && (
                 <div className="mobile-images-row" style={{ display: 'flex', justifyContent: 'space-around', gap: '12px', overflowX: 'auto', paddingBottom: '12px', scrollSnapType: 'x mandatory' }}>
-                  {project.mobileImages.map((src, i) => (
+                  {project.mobileImages.filter(Boolean).map((src, i) => (
                     <div key={i} style={{ flexShrink: 0, scrollSnapAlign: 'start', width: 'auto' }}>
                       <ImageLightbox src={src} alt="" imageStyle={{ width: 'auto', maxHeight: 'calc(90vh - 96px)', margin: '0 auto' }}>
                         <div style={{ borderRadius: '16px', overflow: 'hidden' }}>
@@ -760,6 +785,29 @@ export default function ProjectPage({ project }) {
                     </div>
                   ))}
                 </div>
+                )}
+              </div>
+            )}
+
+            {/* New screens */}
+            {project.newScreensDescription && (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+                <SubHeading>New <em style={{ fontStyle: 'italic', color: 'var(--color-accent)' }}>screens</em></SubHeading>
+                <p style={{ ...body, fontSize: '1.4rem', width: '70%' }}>{project.newScreensDescription}</p>
+                {project.newScreensImages?.filter(Boolean).length > 0 && (
+                  <div className="new-screens-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)' }}>
+                    {project.newScreensImages.filter(Boolean).map((s, i) => (
+                      <ImageLightbox key={i} src={s.image} alt={s.caption ?? ''} triggerStyle={{ padding: '24px 0' }}>
+                        <div style={{ borderRadius: '16px', overflow: 'hidden' }}>
+                          <img src={s.image} alt={s.caption ?? ''} loading="lazy" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                        </div>
+                        {s.caption && (
+                          <p style={{ fontFamily: 'var(--font-body)', fontSize: '11px', fontWeight: 400, color: 'rgba(46, 42, 53, 0.75)', textAlign: 'left', margin: '0 4.4%' }}>{s.caption}</p>
+                        )}
+                      </ImageLightbox>
+                    ))}
+                  </div>
+                )}
               </div>
             )}
 

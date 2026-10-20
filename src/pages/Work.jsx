@@ -7,7 +7,10 @@ import ProjectCard from '../components/ProjectCard'
 import FadeIn from '../components/FadeIn'
 import { usePageTitle } from '../hooks/usePageTitle'
 
-const projects = allProjects.filter(p => p.status === 'live')
+// newest first: higher "added" = added more recently
+const projects = allProjects
+  .filter(p => p.status === 'live')
+  .sort((a, b) => (b.added ?? 0) - (a.added ?? 0))
 
 export default function Work() {
   usePageTitle('Projects · Samaia Gahramanov')
@@ -26,8 +29,8 @@ export default function Work() {
         <FadeIn delay={0.05}>
           <div className="work-projects-grid" style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(30%, 1fr))',
-            gap: '3%',
+            gridTemplateColumns: 'repeat(2, 1fr)',
+            gap: '20px',
           }}>
             {projects.map(project => (
               <ProjectCard key={project.id} {...project} variant="full" />

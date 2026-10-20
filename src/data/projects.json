@@ -1,11 +1,13 @@
 [
   {
     "id": "tierheim-helenenhof",
+    "added": 3,
     "title": "Tierheim Helenenhof",
     "year": 2026,
     "type": "Website Redesign",
     "slug": "/collection/tierheim-helenenhof",
     "liveUrl": "https://www.tierheim-huerth.de/",
+    "liveLabel": null,
     "prototypeUrlWeb": null,
     "prototypeUrlMobile": null,
     "cardColor": "rgb(212, 181, 181)",
@@ -127,6 +129,8 @@
       "/assets/TierheimHelenenhof/mob4.png",
       "/assets/TierheimHelenenhof/mob5.png"
     ],
+    "newScreensDescription": null,
+    "newScreensImages": null,
     "resultVideos": [
       null
     ],
@@ -146,12 +150,271 @@
     "status": "live"
   },
   {
+    "id": "pentis",
+    "added": 4,
+    "title": "Pentis",
+    "year": 2026,
+    "type": "Game UX & release",
+    "slug": "/collection/pentis",
+    "liveUrl": "https://grapefruit256.itch.io/pentis",
+    "liveLabel": "Play on itch.io",
+    "prototypeUrlWeb": null,
+    "prototypeUrlMobile": null,
+    "cardColor": "rgb(181, 212, 192)",
+    "cardImage": "/assets/Pentis/pentis-hero.png",
+    "heroImage": null,
+    "shortDescription": "A falling-block puzzle game in the spirit of Tetris, played with pentominoes (five blocks) instead of tetrominoes (four). The five-block shapes make the gameplay more complex and challenging.",
+    "tags": ["UX/UI", "Game UI", "Localisation", "Game Release"],
+    "roles": ["UX/UI Designer & Developer"],
+    "duration": ["6 months"],
+    "tools": ["Figma, VSCode, Python, GitHub, Notion, Claude Code"],
+    "goal": "Make Pentis understandable and dependable for a player who downloads it cold, without changing how it feels to its existing community.",
+    "overviewText": "Pentis was created by Martin (Grapefruit 256) in 2023. A small, competitive community grew around it on itch.io and Discord, including a community-run Pentis tournament. When I joined the project in April 2026, version 0.8.1 was fun for people who already knew it, but not ready for strangers. I took ownership of the player experience from first launch to final score. That meant auditing the game, restructuring the menus, rewriting the in-game help, localising the interface and building it all in Python with AI as my coding partner. I also prepared the release package that players download.",
+    "problemText": "The game engine itself was good. Everything around it assumed you already knew how to play.",
+    "responsibilities": [
+      "UX/UI design & game flow",
+      "Information architecture",
+      "Localisation (EN · DE · RO)",
+      "Python implementation with AI assistance",
+      "Testing & release package"
+    ],
+    "researchIntro": "I went through 0.8.1 the way a new player would: download, first launch, first game, first score. I combined that walkthrough with the owner's development notes and bug reports from community players. Two problems came before any design work: a fresh install crashed before a window appeared, so new players were locked out completely, and saving and showing high scores was broken, which hit the scoreboard the community competes on. Once those were fixed, four bigger UX problems stood out.",
+    "researchInsights": [
+      {
+        "label": "Chaotic, inconsistent interface:",
+        "text": "Every screen was laid out a little differently. There was no consistent footer, typefaces were mixed and some text fell back to a default system font. The HUD showed the score as a bare number with no label."
+      },
+      {
+        "label": "No clear actions or way back:",
+        "text": "Nothing told players what a key would do. Some screens showed 'Back – ESC' but also went back on Enter, and confirm dialogs used a generic Yes/No instead of naming the action, so players couldn't predict the result of a keypress."
+      },
+      {
+        "label": "A confusing path from menu to game:",
+        "text": "Username sat in the main menu next to Start Game, so it looked like a required step, yet it was easy to skip, and scores were then saved as 'Norbert Noname'. Mode and difficulty (labelled 'Pentominoes') were hidden in Options, so there was no clear order of steps."
+      },
+      {
+        "label": "Missing screens and steps:",
+        "text": "There was no help screen, only three key hints in the footer. There was no mode choice before a game, no first-game tips, no sound or language settings and no About screen. Scoring, difficulty levels and DAS were explained nowhere."
+      }
+    ],
+    "personasIntro": "Two proto-personas came out of the audit: Jonas, a scoreboard regular from the existing community, and Ioana, a newcomer who finds Pentis on itch.io.",
+    "persona1": {
+      "name": "Jonas",
+      "location": "Existing community, plays Pro",
+      "photo": "/assets/Pentis/persona1.png",
+      "quote": "Don't slow the game down for beginners. Just let me set it up the way I play.",
+      "goals": [
+        "Beat their own record on a specific difficulty",
+        "Fine-tune movement speed and key bindings",
+        "See their name rank against other players"
+      ],
+      "frustrations": [
+        "If he forgets to set his name, his best runs are saved as 'Norbert Noname'",
+        "Settings are split between the main menu and Options, and 'Pentominoes' doesn't say it means difficulty",
+        "Enter and Esc don't work the same way on every screen, so one wrong key can throw him out of a menu"
+      ]
+    },
+    "persona2": {
+      "name": "Ioana",
+      "location": "itch.io newcomer",
+      "photo": "/assets/Pentis/persona2.png",
+      "quote": "It looks like Tetris, so why do I keep losing? I just want to know what the keys do.",
+      "goals": [
+        "Understand the game within a minute",
+        "Try it without pressure first",
+        "Play in his own language"
+      ],
+      "frustrations": [
+        "No obvious first step: set a name, pick a mode, or just press Start?",
+        "No help screen, only three key hints, and nothing on how scoring works",
+        "English-only menus with terms like 'DAS' and 'Pentominoes'"
+      ]
+    },
+    "auditIntro": null,
+    "auditImages": null,
+    "sitemapImage": "/assets/Pentis/pentis-sitemap.png",
+    "sitemapDescription": "I reduced the main menu to four actions, which made the start of a game a guided path. Identity, preferences and information moved into Options. Help and Back work the same on every screen: H opens help, Esc goes back.",
+    "ideateIntro": null,
+    "sketchImages": null,
+    "sketchDescription": "",
+    "visualDirectionText": "The community already recognised Pentis by its block-letter title, purple highlight and arcade typeface, so I kept that identity. My work was to make the system consistent: one type scale, one highlight style, one footer and one way to go back.",
+    "moodboardImage": "/assets/Pentis/pentomino.png",
+    "uiKitImage": "/assets/Pentis/design-kit.png",
+    "lofiDescription": null,
+    "lofiImages": null,
+    "hifiDescription": null,
+    "hifiImages": null,
+    "testingIntro": "Five players tested the game: newcomers seeing Pentis for the first time and regulars from the existing community. Alongside their playtests, I added automated tests for the parts that silently lose data: saving scores, reading settings and logging crashes.",
+    "testingQuote": null,
+     "metrics": [
+      { "value": "5", "label": "players tested 0.9, from first-timers to scoreboard regulars" },
+      { "value": "100%", "label": "of new players can open the game. In 0.8.1, every fresh install crashed on first launch" },
+      { "value": "8", "label": "new screens that answer questions new players kept asking" }
+    ],
+    "testingOverall": "Five players tested 0.9, both newcomers and regulars from the community. They found it polished, calm and easy to get into, with menus and onboarding ahead of most indie games at this stage. The main takeaway was that the presentation is now ahead of the gameplay, so the next version will focus on the first 30 seconds after pressing Start: better controls, a ghost piece and a faster opening.",
+    "refinements": [
+      { "title": "Dialog buttons", "text": "'Yes' and 'No' became verbs that say what happens: Quit, Reset, End, Resume." },
+      { "title": "Help screen", "text": "Rebuilt from centred text to left-aligned label–value rows, with real point values in place of vague descriptions." },
+      { "title": "Enter vs. Esc", "text": "Enter also triggered 'back' on screens that only show 'Back – ESC'. Now each screen responds only to the keys it shows." },
+      { "title": "Sound defaults", "text": "Music and sound effects can be switched on and off separately. Music is off by default and plays only during a game, and effects start at 75% volume." },
+      { "title": "Piece randomiser", "text": "The same piece can no longer appear twice in a row, including across bag boundaries." },
+      { "title": "Practice feedback", "text": "The end screen says when a score was not saved because the game was played in Practice." },
+      { "title": "Language selector", "text": "Changed from a horizontal row to a column that grows with each language. Each name is shown in its own font, so 'Română' renders correctly before you pick it." }
+    ],
+    "resultsText": "Both versions below are rendered from the actual code: on the left, the 0.8.1 build I inherited; on the right, the 0.9 release. Pentis 0.9 beta is the game’s first public release for macOS and Windows. It ships with a step-by-step guide for opening the app on a Mac and a crash log that tells players where to send feedback.",
+    "resultImages": [
+      { "image": "/assets/Pentis/res1.png", "caption": "Main menu: four actions, consistent footer, help always one key away" },
+      { "image": "/assets/Pentis/res2.png", "caption": "Options: everything a player configures, in one place" },
+      { "image": "/assets/Pentis/res3.png", "caption": "Scoreboard: scores that save, in one table per difficulty" },
+      { "image": "/assets/Pentis/res4.png", "caption": "Username: asked once, at the moment it matters" },
+      { "image": "/assets/Pentis/res5.png", "caption": "Game screen: one typeface, clear labels, no guesswork." }
+
+
+    ],
+    "mobileDescription": null,
+    "mobileImages": [null],
+    "newScreensDescription": "These screens did not exist in 0.8.1. Each one answers a question new players kept running into.",
+    "newScreensImages": [
+      { "image": "/assets/Pentis/ns1.png", "caption": "Controls. Every piece control can be rebound, including three rotation keys: counter-clockwise, clockwise and 180°. Competitive players can set the game up the way they play." },
+      { "image": "/assets/Pentis/ns2.png", "caption": "English, Deutsch and Română sit in a column that can grow with more languages. Each name is shown in its own font, so “Română” renders correctly before you pick it." },
+      { "image": "/assets/Pentis/ns3.png", "caption": "Help (H, anywhere). Two columns of label–value rows. Scoring lists the real point values (lines² × 100), and Controls shows the player's own key bindings." },
+      { "image": "/assets/Pentis/ns4.png", "caption": "About. The version number and credits for Martin (Grapefruit 256), who created Pentis, in one place." },
+      { "image": "/assets/Pentis/ns5.png", "caption": "Name already taken. If the name already exists on a scoreboard, the game asks whether to play as that user or create a new one, so scores don’t end up under the wrong player." },
+      { "image": "/assets/Pentis/ns6.png", "caption": "Deutsch. The whole interface is translated, including menus, help, dialogs." }
+    ],
+    "resultVideos": [null],
+    "reflections": [
+      {
+        "title": "Design for the first-time player, not for myself",
+        "text": "After months inside Pentis, I knew every key and menu by heart, which made it easy to stop seeing what a newcomer sees. I kept reminding myself that someone might be opening the game for the very first time, so everything had to be, and stay, clear, easy to find and easy to understand. The menus, options and help took a lot of effort, but their job is to get out of the way. The game is the point."
+      },
+      {
+        "title": "AI as a coding partner, not a mind reader",
+        "text": "Writing the Python with Claude Code made the work much easier and faster. But it only did what I told it to, so I had to describe every change piece by piece, check the result and decide what stayed. I learned to treat it as a tool I manage, not as a colleague who understands what I mean without an explanation. The design decisions, the testing and the final call stayed with me."
+      }
+    ],
+    "nextProjectId": null,
+    "previousProjectId": "quickxchange",
+    "featured": true,
+    "status": "live"
+  },
+  {
+    "id": "quickxchange",
+    "added": 1,
+    "title": "QuickXchange",
+    "year": 2025,
+    "type": "Concept Mobile App & Website",
+    "slug": "/collection/quickxchange",
+    "liveUrl": null,
+    "liveLabel": null,
+    "prototypeUrlWeb": "https://www.figma.com/proto/KNzcyIJ2DhsyAXAwa5rVnH/QuickXChange?node-id=1051-9553&t=mznK5R8FoVAx4JIB-1",
+    "prototypeUrlMobile": "https://www.figma.com/proto/KNzcyIJ2DhsyAXAwa5rVnH/QuickXChange?node-id=126-1622&t=mznK5R8FoVAx4JIB-1",
+    "cardColor": "rgb(181, 212, 192)",
+    "cardImage": "/assets/QuickXChange/qxccover.webp",
+    "heroImage": null,
+    "shortDescription": "A currency exchange platform designed for travelers, offering real-time rates, secure transactions, and convenient payout options in cash or digital form.",
+    "tags": ["UX/UI Design", "UX Research", "Concept Project"],
+    "roles": ["UI/UX Designer"],
+    "duration": ["4 months"],
+    "tools": ["Figma"],
+    "goal": "Design a simple and trustworthy currency exchange experience — without confusion, hidden fees, or outdated rates. A clean, intuitive app that shows up-to-date rates, clearly communicates fees, and allows quick conversions online and offline.",
+    "overviewText": "QuickXChange is a concept for a fast and transparent currency exchange platform. The project explores how complex financial information can be simplified into a clear, user-friendly experience that supports confident decision-making — on the go and offline.The design covers both a mobile app for quick on-the-go exchanges and a website for account management and detailed financial overviews.",
+    "problemText": "Small details — wording, layout, and feedback — can significantly impact user confidence in a financial context.",
+    "responsibilities": [
+      "UI/UX Design",
+      "UX Research"
+    ],
+    "researchIntro": "Through surveys and desk research I explored how users compare exchange rates, what builds trust in a financial app, and where existing solutions fall short.",
+    "researchInsights": [
+      {
+        "label": "Rate accuracy",
+        "text": "Users feel unsure and frustrated when exchange rates don't seem accurate or up to date — accuracy is the primary trust signal."
+      },
+      {
+        "label": "Interface complexity",
+        "text": "When the interface feels complicated, users feel slowed down and worried about making mistakes — especially with money."
+      },
+      {
+        "label": "Fee transparency",
+        "text": "Hidden fees quickly break trust. People want to clearly understand what they're paying and why before committing to an exchange."
+      },
+      {
+        "label": "Offline access",
+        "text": "Travelers appreciate having access to basic exchange information even without internet — offline mode is a meaningful differentiator."
+      }
+    ],
+    "personasIntro": "Angelo is a budget traveler who needs a straightforward way to check and convert currencies on his phone — making informed decisions while sticking to his travel budget",
+    "persona1": {
+      "name": "Angelo Smith",
+      "location": "Madrid, Spain",
+      "photo": "/assets/QuickXChange/persona.png",
+      "quote": "I just want to know exactly what I'm getting and avoid any surprises - keeping it simple helps me focus on enjoying the journey.",
+      "goals": [
+        "Check rates quickly in unfamiliar places, especially when planning daily expenses.",
+        "Minimize fees while exchanging small amounts frequently.",
+        "Find nearby exchange services or reliable app-based conversion options."
+      ],
+      "frustrations": [
+        "Lack of an easy way to track his preferred currencies over time.",
+        "Unclear fees and inconsistent rates when exchanging currencies while traveling."
+      ],
+      "behavior": [
+        "Frequently checks exchange rates and compares currencies before making payments or transfers.",
+        "Uses the app while traveling across different countries.",
+        "Prefers fast, clear actions and relies on familiar patterns to avoid mistakes when handling finances."
+      ]
+    },
+    "persona2": null,
+    "auditIntro": "I evaluated Revolut, PayPal, and Xe to assess their strengths, weaknesses, and gaps. These apps excel at real-time rate tracking and user trust, but fall short on offline functionality and fee transparency — areas QuickXChange directly addresses.",
+    "auditImages": "/assets/QuickXChange/audit.webp",
+    "sitemapImage": "/assets/QuickXChange/sitemap.png",
+    "sitemapDescription": "The app is structured around five key sections: Exchange, Tools, Nearby ATMs, History, and Profile — ensuring intuitive navigation for performing financial tasks efficiently.",
+    "ideateIntro": "During ideation, I translated user pain points into possible solutions — exploring ways to simplify the conversion flow and build trust through clarity and feedback. Early concepts kept the main action, currency conversion, front and centre.",
+    "sketchImages": [{ "image": "/assets/QuickXChange/sketch1.png", "caption": "Mobile app" }, { "image": "/assets/QuickXChange/sketch2.png", "caption": "Website" }],
+    "sketchDescription": "During ideation, I translated user pain points into possible solutions — exploring ways to simplify the conversion flow and build trust through clarity and feedback. Early concepts kept the main action, currency conversion, front and centre.",
+    "visualDirectionText": "The design phase focused on clarity and usability. A lightweight visual style, clear hierarchy, and familiar UI patterns were used to help users feel confident and in control. Special attention was given to readability, spacing, and visual cues that guide users through the exchange process",
+    "moodboardImage": null,
+    "uiKitImage": "/assets/QuickXChange/design-system.png",
+    "lofiDescription": "Low-fidelity wireframes were used to quickly explore layout options and key user flows — selecting currencies, entering amounts, and viewing results — without visual details getting in the way.",
+    "lofiImages": ["/assets/QuickXChange/lo-fi1.webp", "/assets/QuickXChange/lo-fi2.webp"],
+    "hifiDescription": "High-fidelity wireframes brought the concept to life with refined visuals, colours, typography, and interactions — demonstrating how users move through the exchange flow and access key information with minimal effort.",
+    "hifiImages": ["/assets/QuickXChange/hi-fi1.png", "/assets/QuickXChange/hi-fi2.png"],
+    "testingIntro": null,
+    "testingQuote": null,
+    "metrics": [],
+    "testingOverall": null,
+    "refinements": [],
+    "resultsText": "The final design delivers a clear and user-friendly currency exchange experience — allowing users to quickly convert currencies and understand rates and fees at a glance. The mobile app supports on-the-go use, while the website focuses on account management and a more detailed financial overview.",
+    "resultImages": [{ "image": "/assets/QuickXChange/result-web.webp", "caption": null }],
+    "mobileDescription": null,
+    "mobileImages": ["/assets/QuickXChange/mob1.png", "/assets/QuickXChange/mob2.png", "/assets/QuickXChange/mob3.png", "/assets/QuickXChange/mob4.png", "/assets/QuickXChange/mob5.png", "/assets/QuickXChange/mob6.png"],
+    "newScreensDescription": null,
+    "newScreensImages": null,
+    "resultVideos": [null],
+    "reflections": [
+      {
+        "title": "Designing for trust",
+        "text": "Finance-related design requires extra attention to how information is presented. Small decisions around wording, layout, and feedback carry more weight than in other contexts — trust is earned through every detail."
+      },
+      {
+        "title": "Simplicity as a feature",
+        "text": "The biggest challenge was not adding features, but deciding what to leave out. Reducing cognitive load in a financial app required restraint — every extra element was weighed against whether it helped or hindered the user's confidence."
+      }
+    ],
+    "nextProjectId": "pentis",
+    "previousProjectId": "side-by-side",
+    "featured": false,
+    "status": "live"
+  },
+  {
     "id": "side-by-side",
+    "added": 2,
     "title": "Side By Side",
     "year": 2026,
     "type": "Concept Mobile App",
     "slug": "/collection/side-by-side",
     "liveUrl": null,
+    "liveLabel": null,
     "prototypeUrlWeb": null,
     "prototypeUrlMobile": "https://www.figma.com/proto/fUsqdqBuaf3qJNMTw4EUwL/SideBySide?node-id=133-12248&t=owiqMhyKclufGdNV-1",
     "cardColor": "rgb(181, 196, 212)",
@@ -247,6 +510,8 @@
     "resultImages": null,
     "mobileDescription": null,
     "mobileImages": null,
+    "newScreensDescription": null,
+    "newScreensImages": null,
     "resultVideos": ["/assets/SideBySide/video1.mp4","/assets/SideBySide/video2.mp4","/assets/SideBySide/video3.mp4","/assets/SideBySide/video4.mp4"],
     "reflections": [
       {
@@ -260,110 +525,6 @@
     ],
     "nextProjectId": "quickxchange",
     "previousProjectId": "tierheim-helenenhof",
-    "featured": true,
-    "status": "live"
-  },
-  {
-    "id": "quickxchange",
-    "title": "QuickXchange",
-    "year": 2025,
-    "type": "Concept Mobile App & Website",
-    "slug": "/collection/quickxchange",
-    "liveUrl": null,
-    "prototypeUrlWeb": "https://www.figma.com/proto/KNzcyIJ2DhsyAXAwa5rVnH/QuickXChange?node-id=1051-9553&t=mznK5R8FoVAx4JIB-1",
-    "prototypeUrlMobile": "https://www.figma.com/proto/KNzcyIJ2DhsyAXAwa5rVnH/QuickXChange?node-id=126-1622&t=mznK5R8FoVAx4JIB-1",
-    "cardColor": "rgb(181, 212, 192)",
-    "cardImage": "/assets/QuickXChange/qxccover.webp",
-    "heroImage": null,
-    "shortDescription": "A currency exchange platform designed for travelers, offering real-time rates, secure transactions, and convenient payout options in cash or digital form.",
-    "tags": ["UX/UI Design", "UX Research", "Concept Project"],
-    "roles": ["UI/UX Designer"],
-    "duration": ["4 months"],
-    "tools": ["Figma"],
-    "goal": "Design a simple and trustworthy currency exchange experience — without confusion, hidden fees, or outdated rates. A clean, intuitive app that shows up-to-date rates, clearly communicates fees, and allows quick conversions online and offline.",
-    "overviewText": "QuickXChange is a concept for a fast and transparent currency exchange platform. The project explores how complex financial information can be simplified into a clear, user-friendly experience that supports confident decision-making — on the go and offline.The design covers both a mobile app for quick on-the-go exchanges and a website for account management and detailed financial overviews.",
-    "problemText": "Small details — wording, layout, and feedback — can significantly impact user confidence in a financial context.",
-    "responsibilities": [
-      "UI/UX Design",
-      "UX Research"
-    ],
-    "researchIntro": "Through surveys and desk research I explored how users compare exchange rates, what builds trust in a financial app, and where existing solutions fall short.",
-    "researchInsights": [
-      {
-        "label": "Rate accuracy",
-        "text": "Users feel unsure and frustrated when exchange rates don't seem accurate or up to date — accuracy is the primary trust signal."
-      },
-      {
-        "label": "Interface complexity",
-        "text": "When the interface feels complicated, users feel slowed down and worried about making mistakes — especially with money."
-      },
-      {
-        "label": "Fee transparency",
-        "text": "Hidden fees quickly break trust. People want to clearly understand what they're paying and why before committing to an exchange."
-      },
-      {
-        "label": "Offline access",
-        "text": "Travelers appreciate having access to basic exchange information even without internet — offline mode is a meaningful differentiator."
-      }
-    ],
-    "personasIntro": "Angelo is a budget traveler who needs a straightforward way to check and convert currencies on his phone — making informed decisions while sticking to his travel budget",
-    "persona1": {
-      "name": "Angelo Smith",
-      "location": "Madrid, Spain",
-      "photo": "/assets/QuickXChange/persona.png",
-      "quote": "I just want to know exactly what I'm getting and avoid any surprises - keeping it simple helps me focus on enjoying the journey.",
-      "goals": [
-        "Check rates quickly in unfamiliar places, especially when planning daily expenses.",
-        "Minimize fees while exchanging small amounts frequently.",
-        "Find nearby exchange services or reliable app-based conversion options."
-      ],
-      "frustrations": [
-        "Lack of an easy way to track his preferred currencies over time.",
-        "Unclear fees and inconsistent rates when exchanging currencies while traveling."
-      ],
-      "behavior": [
-        "Frequently checks exchange rates and compares currencies before making payments or transfers.",
-        "Uses the app while traveling across different countries.",
-        "Prefers fast, clear actions and relies on familiar patterns to avoid mistakes when handling finances."
-      ]
-    },
-    "persona2": null,
-    "auditIntro": "I evaluated Revolut, PayPal, and Xe to assess their strengths, weaknesses, and gaps. These apps excel at real-time rate tracking and user trust, but fall short on offline functionality and fee transparency — areas QuickXChange directly addresses.",
-    "auditImages": "/assets/QuickXChange/audit.webp",
-    "sitemapImage": "/assets/QuickXChange/sitemap.png",
-    "sitemapDescription": "The app is structured around five key sections: Exchange, Tools, Nearby ATMs, History, and Profile — ensuring intuitive navigation for performing financial tasks efficiently.",
-    "ideateIntro": "During ideation, I translated user pain points into possible solutions — exploring ways to simplify the conversion flow and build trust through clarity and feedback. Early concepts kept the main action, currency conversion, front and centre.",
-    "sketchImages": [{ "image": "/assets/QuickXChange/sketch1.png", "caption": "Mobile app" }, { "image": "/assets/QuickXChange/sketch2.png", "caption": "Website" }],
-    "sketchDescription": "During ideation, I translated user pain points into possible solutions — exploring ways to simplify the conversion flow and build trust through clarity and feedback. Early concepts kept the main action, currency conversion, front and centre.",
-    "visualDirectionText": "The design phase focused on clarity and usability. A lightweight visual style, clear hierarchy, and familiar UI patterns were used to help users feel confident and in control. Special attention was given to readability, spacing, and visual cues that guide users through the exchange process",
-    "moodboardImage": null,
-    "uiKitImage": "/assets/QuickXChange/design-system.png",
-    "lofiDescription": "Low-fidelity wireframes were used to quickly explore layout options and key user flows — selecting currencies, entering amounts, and viewing results — without visual details getting in the way.",
-    "lofiImages": ["/assets/QuickXChange/lo-fi1.webp", "/assets/QuickXChange/lo-fi2.webp"],
-    "hifiDescription": "High-fidelity wireframes brought the concept to life with refined visuals, colours, typography, and interactions — demonstrating how users move through the exchange flow and access key information with minimal effort.",
-    "hifiImages": ["/assets/QuickXChange/hi-fi1.png", "/assets/QuickXChange/hi-fi2.png"],
-    "testingIntro": null,
-    "testingQuote": null,
-    "metrics": [],
-    "testingOverall": null,
-    "refinements": [],
-    "resultsText": "The final design delivers a clear and user-friendly currency exchange experience — allowing users to quickly convert currencies and understand rates and fees at a glance. The mobile app supports on-the-go use, while the website focuses on account management and a more detailed financial overview.",
-    "resultImages": [{ "image": "/assets/QuickXChange/result-web.webp", "caption": null }],
-    "mobileDescription": null,
-    "mobileImages": ["/assets/QuickXChange/mob1.png", "/assets/QuickXChange/mob2.png", "/assets/QuickXChange/mob3.png", "/assets/QuickXChange/mob4.png", "/assets/QuickXChange/mob5.png", "/assets/QuickXChange/mob6.png"],
-    "resultVideos": [null],
-    "reflections": [
-      {
-        "title": "Designing for trust",
-        "text": "Finance-related design requires extra attention to how information is presented. Small decisions around wording, layout, and feedback carry more weight than in other contexts — trust is earned through every detail."
-      },
-      {
-        "title": "Simplicity as a feature",
-        "text": "The biggest challenge was not adding features, but deciding what to leave out. Reducing cognitive load in a financial app required restraint — every extra element was weighed against whether it helped or hindered the user's confidence."
-      }
-    ],
-    "nextProjectId": null,
-    "previousProjectId": "side-by-side",
     "featured": true,
     "status": "live"
   }

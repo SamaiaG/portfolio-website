@@ -103,17 +103,17 @@
   }
 
   /* ── Research insights grid ── */
-  section .container > div > div > div[style*="grid-template-columns"] {
+  section .container > div > div > div[style*="grid-template-columns"]:not(.new-screens-grid) {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 6px !important;
   }
 
   /* insight cards: padding and text */
-  section .container > div > div > div[style*="grid-template-columns"] > div {
+  section .container > div > div > div[style*="grid-template-columns"]:not(.new-screens-grid) > div {
     padding: 20px !important;
   }
 
-  section .container > div > div > div[style*="grid-template-columns"] p {
+  section .container > div > div > div[style*="grid-template-columns"]:not(.new-screens-grid) p {
     font-size: 0.9rem !important;
   }
 
@@ -229,9 +229,16 @@
     gap: 12px !important;
   }
 
+  /* new screens: single column */
+  .new-screens-grid {
+    display: flex !important;
+    flex-direction: column;
+  }
+
   /* final outcome cards */
   .result-image-card {
     height: auto !important;
+    max-height: none !important;
     padding: 20px !important;
   }
 
